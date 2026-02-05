@@ -26,64 +26,45 @@ Logistic Regression/
 │  └─ (generated files)
 └─ README.md
 ```
-How to Run
+##How to Run
 
 From the project root folder (Logistic Regression/):
 
+~~~
 python src/train_score_patron_subscription_logistic_regression.py
+~~~
 
-Outputs (Evidence Locker)
+##Outputs (Evidence Locker)
 
 All files are written to output/.
 
-Data validation / range filtering
+#Data validation / range filtering
+-training_feature_ranges.csv
+-scoring_out_of_range_summary.csv
+-scoring_rows_removed_out_of_range.csv (only if rows were removed)
 
-training_feature_ranges.csv
+#Model outputs (interpretability)
+-logistic_regression_model_summary.txt
+-model_coefficients_and_odds_ratios.csv
+-predictor_pvalues.csv
+-Performance (training)
+-classification_metrics.csv
+-confusion_matrix.csv
+-roc_curve_points.csv
 
-scoring_out_of_range_summary.csv
+#Scoring predictions
+-patron_renewal_predictions.csv
+-top10_most_likely_to_renew.csv
+-top10_least_likely_to_renew.csv
 
-scoring_rows_removed_out_of_range.csv (only if rows were removed)
+#Visuals (PNG)
+-class_balance.png
+-probability_distribution_training.png
+-confusion_matrix.png
+-roc_curve.png
+-coefficients_log_odds.png
 
-Model outputs (interpretability)
-
-logistic_regression_model_summary.txt
-
-model_coefficients_and_odds_ratios.csv
-
-predictor_pvalues.csv
-
-Performance (training)
-
-classification_metrics.csv
-
-confusion_matrix.csv
-
-roc_curve_points.csv
-
-Scoring predictions
-
-patron_renewal_predictions.csv
-
-top10_most_likely_to_renew.csv
-
-top10_least_likely_to_renew.csv
-
-Visuals (PNG)
-
-class_balance.png
-
-probability_distribution_training.png
-
-confusion_matrix.png
-
-roc_curve.png
-
-coefficients_log_odds.png
-
-Notes
-
-Thresholding uses 0.50 by default (ProbabilityRenew >= 0.50 → “Yes”).
-
-Coefficients are in log-odds. Odds ratios are computed as exp(coefficient) to make feature effects easier to interpret.
-
-The range-check step is a conservative guardrail against scoring inputs that fall outside the training data distribution.
+#Notes
+-Thresholding uses 0.50 by default (ProbabilityRenew >= 0.50 → “Yes”).
+-Coefficients are in log-odds. Odds ratios are computed as exp(coefficient) to make feature effects easier to interpret.
+-The range-check step is a conservative guardrail against scoring inputs that fall outside the training data distribution.
