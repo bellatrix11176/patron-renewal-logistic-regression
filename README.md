@@ -26,7 +26,7 @@ Logistic Regression/
 │  └─ (generated files)
 └─ README.md
 ```
-##How to Run
+#How to Run
 
 From the project root folder (Logistic Regression/):
 
@@ -34,7 +34,7 @@ From the project root folder (Logistic Regression/):
 python src/train_score_patron_subscription_logistic_regression.py
 ~~~
 
-##Outputs (Evidence Locker)
+#Outputs (Evidence Locker)
 
 All files are written to output/.
 
