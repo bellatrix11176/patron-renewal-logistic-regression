@@ -65,3 +65,6 @@ Notes
 - Predictions use a default decision threshold of 0.50 (ProbabilityRenew >= 0.50 → Yes).
 - Coefficients are in log-odds. Odds ratios are computed as exp(coefficient).
 - The range-check step is a conservative guardrail against scoring inputs outside the training distribution.
+
+🌐 **PixelKraze Analytics (Portfolio):** https://pixelkraze.com/?utm_source=github&utm_medium=readme&utm_campaign=portfolio&utm_content=homepage
+
